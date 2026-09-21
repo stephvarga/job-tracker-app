@@ -336,3 +336,49 @@ body {
   background: #1BC8D4;
   color: #0D0805;
 }
+/* --- Status banners --------------------------------------------------- */
+
+.banner,
+.bannerWarn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.banner {
+  background: #2A0D0D;
+  border: 1px solid #C44A1A;
+  color: #F2C14A;
+}
+
+.bannerWarn {
+  background: #1A0D2E;
+  border: 1px solid #F2C14A;
+  color: #E8E8D0;
+}
+
+.bannerBtn {
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid currentColor;
+  color: inherit;
+  font-size: 0.8125rem;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.bannerBtn:hover {
+  background: rgba(242, 193, 74, 0.15);
+}
+
+.clockBtn:disabled,
+.addBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

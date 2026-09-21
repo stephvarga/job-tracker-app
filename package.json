@@ -1,22 +1,33 @@
 {
-  "name": "job-tracker-app",
+  "name": "shop-timer",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "license": "MIT",
+  "description": "Time tracking for a metal shop, clock in, tap a job, export hours for invoicing.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephvarga/shop-timer.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:tz": "TZ=UTC vitest run && TZ=Asia/Tokyo vitest run && TZ=America/New_York vitest run",
+    "healthcheck": "node scripts/audit.mjs",
+    "verify": "tsc -b --noEmit && eslint . && vitest run"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.104.1",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "supabase": "^2.95.3"
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "supabase": "^2.95.3",
     "@tailwindcss/vite": "^4.2.4",
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",
@@ -28,6 +39,7 @@
     "globals": "^17.5.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
-    "vite": "^8.0.10"
+    "vite": "^8.0.10",
+    "vitest": "^4.1.10"
   }
 }
