@@ -22,5 +22,6 @@ if (!supabaseUrl || !supabaseAnonKey) {
 }
 
 // This key is meant to be public; it ships in the JS bundle. Row-level
-// security is what actually protects the data. See SECURITY.md.
+// security is what actually protects the data, and it only holds if public
+// sign-ups are disabled. See the Security section in README.md.
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
