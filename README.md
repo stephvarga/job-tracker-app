@@ -6,10 +6,7 @@ timer, export hours as CSV for invoicing.
 Built for a metal working shop, but it fits anyone who needs to allocate hours
 across clients, trades, studios, freelancers, repair work.
 
-<!-- Record a ~15s capture of: clock in → tap a job → switch jobs → export CSV.
-     Save as docs/demo.gif and uncomment:
 ![Shop Timer demo](docs/demo.gif)
--->
 
 ---
 
