@@ -35,7 +35,9 @@ export default class ErrorBoundary extends Component<Props, State> {
     return (
       <div
         style={{
-          minHeight: '100vh',
+          // Keeps its own background deliberately: this screen has to render
+          // correctly even if the stylesheet is what failed.
+          minHeight: '100dvh',
           background: '#0D0805',
           color: '#E8E8D0',
           padding: '48px 24px',

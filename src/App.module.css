@@ -1,16 +1,10 @@
-*, *::before, *::after { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: #0D0805;
-  color: #E8E8D0;
-}
+/* Global resets, fonts and the page background live in index.css. Element
+   selectors here would leak out of the module and fight it. */
 
 .container {
-  min-height: 100vh;
+  min-height: 100dvh;
   padding: 24px;
-  background: #0D0805;
+  background-color: #0D0805;
 }
 
 .inner {
